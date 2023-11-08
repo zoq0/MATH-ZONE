@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- FONT LINK -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Luckiest+Guy&family=Merriweather&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/4323c15833.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Math Castlè</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="start-page">
+                <img
+                    id="game-title"
+                    src="./img/title.png"
+                    alt="Math Castle Title"
+                />
+                <div id="instructions">
+                    <h2 class="instructions-header blur-background">
+                        Instructions:
+                    </h2>
+                    <p class="instructions-paragraph blur-background">
+                        
+                        Defend the castle by clicking on enemies and answering
+                        their question then pressing enter. Survive until the
+                        timer runs out but beware as time ticks down the enemies
+                        will speed up.
+                    </p>
+                    <button class="button start-button">Play</button>
+                </div>
+                <footer id="start-page-footer">
+                    Made with <span> </span> by
+                    <a href="https://github.com/LaraZay" target="_blank"
+                        >| LaraZay |</a
+                    >
+                </footer>
+            </div>
+
+            <div id="difficulty-select-page">
+                <button class="button start-button" data-difficulty="easy">
+                    Easy
+                </button>
+                <button class="button start-button" data-difficulty="medium">
+                    Medium
+                </button>
+                <button class="button start-button" data-difficulty="hard">
+                    Hard
+                </button>
+                <button class="button start-button" data-difficulty="insane">
+                    Insane
+                </button>
+            </div>
+
+            <div id="game-page">
+                <div id="game-board-container">
+                    <div id="game-board-menu">
+                        <button class="button pause-button">Pause</button>
+                        <p id="game-score">
+                            Score:
+                            <span class="ui-value" data-score-display></span>
+                        </p>
+                        <p id="game-timer"></p>
+                        <p id="castle-lives-header">
+                            Health:
+                            <span class="ui-value" id="castle-lives"></span>
+                        </p>
+                        <button id="home-button" class="button pause-button">
+                            Home
+                        </button>
+                    </div>
+                    <div id="game-board">
+                        <div id="castle"></div>
+                    </div>
+                    <div id="answer-form-container">
+                        <form class="answer-form">
+                            <input
+                                type="number"
+                                max="10000"
+                                id="answer-input"
+                                autocomplete="off"
+                                placeholder="ENTER YOUR ANSWER"
+                            />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="game-over-page">
+                <div class="gameover-info">
+                    <h1 id="game-over-title" class="title">Game Over</h1>
+                    <h2 class="title-score">
+                        Score: <span data-score-display class="score">10</span>
+                    </h2>
+                    <h2 class="title-score title-question-history">
+                        Question History
+                    </h2>
+
+                    <div id="table-container">
+                        <table id="question-history">
+                            <thead>
+                                <tr>
+                                    <th>Questions</th>
+                                    <th>Your Answers</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <button id="restart-button" class="button">Restart</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
